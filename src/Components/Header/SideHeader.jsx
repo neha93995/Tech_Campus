@@ -21,7 +21,7 @@ function SideHeader() {
             <div className=' overflow-hidden'>
                 <ul className='text-right'>
                     <li><NavLink to={'/'} className={({isActive})=>`${isActive ?' bg-blue-500':''} flex w-full items-center gap-4 justify-center p-3 rounded-sm hover:bg-blue-500 `} ><FaHome className='text-3xl'/><span className={isChecked?'block':'hidden'} > Home</span></NavLink></li>
-                    <li><NavLink to={'/about'} className={({isActive})=>`${isActive ?' bg-blue-500':''} flex w-full items-center gap-4 justify-center p-3 rounded-sm hover:bg-blue-500 `} ><IoPerson className='text-3xl'/><span className={isChecked?'block':'hidden'} > About</span></NavLink></li>
+                    <li><NavLink to={'/about'} className={({isActive})=>`${isActive ?' bg-blue-500':''} flex w-full items-center gap-4 justify-center p-3 rounded-sm hover:bg-blue-500  `} ><IoPerson className='text-3xl'/><span className={isChecked?'block':'hidden'} > About</span></NavLink></li>
                     
                 </ul>
 

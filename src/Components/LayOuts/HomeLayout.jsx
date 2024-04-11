@@ -7,15 +7,14 @@ function HomeLayout({children}){
     return (
     <>
         <div className="flex ">
-            <div className="h-[200vh] w-full border border-yellow-600 ">
+            <div className="h-[200vh] w-full  ">
                 <TopHeader/>
             {
                 children
             }
             </div>
              <SideHeader />
-            {/* <div className="w-[20%] border border-b-blue-400">
-            </div> */}
+            
 
         </div>
     </>
