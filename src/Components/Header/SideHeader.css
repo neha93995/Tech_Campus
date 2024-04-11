@@ -1,0 +1,7 @@
+#sideHeaderToggle:checked + .sideHeader{
+    position: fixed;
+    width: 200px;
+    transition: all .4s ease-in-out;
+
+}
+
