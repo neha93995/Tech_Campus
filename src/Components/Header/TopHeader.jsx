@@ -1,12 +1,20 @@
+import logo from '../../Images/tech_campus_logo.png'
+import { FaMoon } from "react-icons/fa";
+
+
 function TopHeader(){
     return(
-        <div className="sticky top-0 left-0 right-0 h-14 p-2 px-5 font-extrabold shadow-xl">
+        <div className="sticky bg-white top-0 left-0 right-0 h-14 p-2 px-16 shadow-xl z-50">
             
-            {/*----------------- login user image */}
-            <div className="bg-blue-600 rounded-full w-10 h-10 p-[2px]">
-                <div className="flex gap-3 items-center">
-                    <img src="https://as1.ftcdn.net/v2/jpg/01/68/80/20/1000_F_168802075_Il6LeUG0NCK4JOELmkC7Ki81g0CiLpxU.jpg"  className="rounded-full"/>
-                    <div className="text-blue-600 hidden sm:block">user</div>
+            <div className='flex justify-between items-center'>
+                {/*----------------- login user image */}
+                <div className="w-24 p-[2px]">
+                    <img src={logo} alt='logo' />
+                </div>
+
+                <div className='flex'>
+                    <button className='border border-blue-600  hover:bg-blue-600 px-2 font-bold  text-blue-600 hover:text-white  rounded-lg mx-4 '><FaMoon className='text-lg'/> </button>
+                    <button className='border py-2 px-5 bg-blue-600 text-xs font-bold text-white  rounded-lg '>login</button>
                 </div>
             </div>
         </div>

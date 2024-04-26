@@ -1,0 +1,42 @@
+.Home_title {
+    position: relative;
+}
+
+.animation_circle {
+    position: absolute;
+    top: -37px;
+    left: 0px; 
+    opacity: 0;
+    animation: animate_circle 3s linear 2s 1 forwards;
+
+}
+
+@keyframes animate_circle {
+    0% {
+        opacity: 1;
+        left: 0px;
+        transform: rotate(0deg);
+        top: -37px;
+    }
+    25%{
+
+        transform: rotate(360deg);
+        top: -37px;
+    }
+    50% {
+        transform: rotate(720deg);
+        top: -37px;
+    }
+    75% {
+    
+        left: calc(101% ); /* Move to the right edge of .Home_title */
+        transform: rotate(1080deg); /* Rotate twice for a smoother effect */
+        top: -37px;
+    }
+    100%{
+        top:calc(55%);
+        opacity: 1;
+        left: calc(101% ); /* Move to the right edge of .Home_title */
+
+    }
+}

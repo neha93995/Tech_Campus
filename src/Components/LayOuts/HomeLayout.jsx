@@ -8,12 +8,12 @@ function HomeLayout({children}){
     <>
         <div className="flex ">
             <div className="h-[200vh] w-full  ">
-                <TopHeader/>
+            <TopHeader/>
             {
                 children
             }
             </div>
-             <SideHeader />
+            <SideHeader />
             
 
         </div>
