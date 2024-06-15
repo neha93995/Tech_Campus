@@ -1,0 +1,19 @@
+
+@media (hover: hover) {
+   
+    @supports (color: oklch(0% 0 0)) {
+        :where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)):not(.active, .btn):hover, :where(.menu li:not(.menu-title, .disabled) > details > summary:not(.menu-title)):not(.active, .btn):hover {
+            background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+        }
+    }
+}
+
+
+.menu li > *:not(ul, .menu-title, details, .btn):active,
+.menu li > *:not(ul, .menu-title, details, .btn).active,
+.menu li > details > summary:active {
+    --tw-bg-opacity: 1;
+    background-color:rgb(37 99 235 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
+}

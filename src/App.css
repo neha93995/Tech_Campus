@@ -5,6 +5,11 @@ body::-webkit-scrollbar{
 body{
   scroll-behavior: smooth;
 }
-.app{
-  background-color: #fff; 
+
+.border{
+  border: 1px solid #ffffff31;
+}
+
+hr{
+  border: 0.5px solid #ffffff31;
 }

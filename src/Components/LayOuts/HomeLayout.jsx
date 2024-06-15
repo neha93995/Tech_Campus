@@ -7,13 +7,13 @@ function HomeLayout({children}){
     return (
     <>
         <div className="flex ">
-            <div className="h-[200vh] w-full  ">
-            <TopHeader/>
+            <SideHeader />
+            <div className=" w-full  ">
+            <TopHeader  type={"2"}/>
             {
                 children
             }
             </div>
-            <SideHeader />
             
 
         </div>
