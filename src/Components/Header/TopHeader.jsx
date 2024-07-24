@@ -34,7 +34,8 @@ function TopHeader({type}) {
                 </div>
 
                 <div className='flex'>
-                    <button className='border border-blue-600  hover:bg-blue-600 px-2 font-bold  text-blue-600 hover:text-white  rounded-lg mx-4 '><FaMoon className='text-lg'/> </button>
+                    {/* -------------------- Dark/Light Mode ------------------  */}
+                    {/* <button className='border border-blue-600  hover:bg-blue-600 px-2 font-bold  text-blue-600 hover:text-white  rounded-lg mx-4 '><FaMoon className='text-lg'/> </button> */}
                     {
                         authContext.isLogin ?
                             

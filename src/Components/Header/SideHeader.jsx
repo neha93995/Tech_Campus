@@ -13,40 +13,6 @@ import { LuFileSpreadsheet } from "react-icons/lu";
 import { FaCode } from "react-icons/fa";
 import { PiExam } from "react-icons/pi";
 
-const navItem = [
-   
-    {
-        path: '/profile',
-        nav: 'Profile',
-        icon: <CgProfile className='text-2xl' />
-    },{
-        path:"/blog-page",
-        nav: "Blogs",
-        icon:<GrBlog className='text-2xl'/>
-    },{
-        path:"/",
-        nav: "CS Fundamentals",
-        icon:<MdOutlineDisplaySettings className='text-2xl'/>
-    },{
-        path:"/",
-        nav: "DSA Sheet",
-        icon:<LuFileSpreadsheet className='text-2xl'/>
-    },{
-        path:"/",
-        nav: "Tests",
-        icon:<PiExam className='text-2xl'/>
-    },{
-        path:"/",
-        nav: "Assignments",
-        icon:<MdOutlineAssignment className='text-2xl'/>
-    },{
-        path:"/",
-        nav: "Coding Plateform",
-        icon:<FaCode className='text-2xl'/>
-    }
-]
-
-
 function SideHeader() {
 
     const authContext = useContext(AuthContext);
@@ -74,13 +40,35 @@ function SideHeader() {
                         </li>
                         {/* <li><NavLink to={'/'} className={({ isActive }) => `${isActive ? ' bg-blue-500' : ''} flex w-full items-center justify-end gap-4 p-3 rounded-sm hover:bg-blue-500 `} ><span className={isChecked ? 'block' : 'hidden'} > Home</span></NavLink></li> */}
 
-                        {
-                            navItem.map((item, index) => {
-                                return (
-                                    <NavItem key={index} navData={item} isChecked={isChecked} />
-                                )
-                            })
-                        }
+
+                        {/* -----------------------------------------nav item------------------ */}
+                        <NavItem navData={{ path: '/profile', nav: 'Profile', icon: <CgProfile className='text-2xl' /> }} isChecked={isChecked} />
+                        <NavItem navData={{ path: "/blog-page", nav: "Blogs", icon: <GrBlog className='text-2xl' /> }} isChecked={isChecked} />
+                        <ul className="menu p-0 m-0">
+                            <li>
+                                <details open>
+                                    <summary className={` flex w-full items-center  gap-4 p-3 rounded-sm hover:bg-blue-500 `} > <MdOutlineDisplaySettings className='text-2xl' /> Fundamental </summary>
+                                    <ul className='border-l border-white'>
+                                        
+                                         <NavItem navData={{ path: "/fundamental/dbms", nav: "DBMS", subject:"dbms" }} isChecked={isChecked} />
+                                         <NavItem navData={{ path: "/fundamental/computer-network", nav: "Computer network", subject:"computer-network" }} isChecked={isChecked} />
+                                         <NavItem navData={{ path: "/fundamental/operating-system", nav: "Operating System", subject:"operating-system" }} isChecked={isChecked} />
+                                        
+                                        
+                                    </ul>
+                                </details>
+                            </li>
+                        
+                        </ul>
+
+                       <NavItem navData={{ path: "/", nav: "DSA Sheet", icon: <LuFileSpreadsheet className='text-2xl' /> }} isChecked={isChecked} />
+                        <NavItem navData={{ path: "/", nav: "Tests", icon: <PiExam className='text-2xl' /> }} isChecked={isChecked} />
+                        <NavItem navData={{ path: "/", nav: "Assignments", icon: <MdOutlineAssignment className='text-2xl' /> }} isChecked={isChecked} />
+
+                        <NavItem navData={{ path: "/", nav: "Coding Plateform", icon: <FaCode className='text-2xl' /> }} isChecked={isChecked} />
+                        {/* <NavItem  navData={{}} isChecked={isChecked} /> */}
+
+
                     </ul>
 
 
@@ -94,7 +82,7 @@ function SideHeader() {
 
 function NavItem({ navData, isChecked }) {
     return (
-        <li><NavLink to={navData.path} className={({ isActive }) => `${isActive ? ' bg-blue-500' : ''} flex w-full items-center  gap-4 p-3 rounded-sm hover:bg-blue-500 ${!isChecked && 'justify-center'}  `} >{navData.icon}<span className={isChecked ? 'block' : 'hidden'} >{navData.nav}</span></NavLink></li>
+        <li><NavLink to={navData.path } className={({ isActive }) => `${isActive ? ' bg-blue-500' : ''} flex w-full items-center  gap-4 p-3 rounded-sm hover:bg-blue-500 ${!isChecked && 'justify-center'}  `} >{navData.icon}<span className={isChecked ? 'block' : 'hidden'} >{navData.nav}</span></NavLink></li>
     )
 }
 

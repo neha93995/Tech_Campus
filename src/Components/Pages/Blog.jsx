@@ -63,9 +63,6 @@ function Blog(props) {
                             )
                         })
                     }
-
-
-
                 </div>
 
             </div>
@@ -80,20 +77,8 @@ function BlogCard({ item }) {
     const [like, setLike] = useState(false);
     const [disLike, setDisLike] = useState(false);
     const [viewImage, setViewImage] = useState(false);
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState(item.images);
 
-
-    useEffect(() => {
-        getImagesOfBlog();
-    }, [])
-
-    const getImagesOfBlog = () => {
-        getBlogImages(item.id)
-            .then((res) => {
-                setImages(res.data);
-            })
-            .catch((err) => console.log(err));
-    }
 
 
     const handleDislike = () => {
@@ -124,24 +109,8 @@ function BlogCard({ item }) {
                             )
                         })
                     }
-                    <div className="carousel-item w-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-                    </div>
-                    <div className="carousel-item w-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-                    </div>
-                    <div className="carousel-item w-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-                    </div>
-                    <div className="carousel-item w-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-                    </div>
-                    <div className="carousel-item w-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-                    </div>
-                    <div className="carousel-item w-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-                    </div>
+                  
+                 
                 </div>
             </div>
             <div className="p-5">

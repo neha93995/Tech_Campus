@@ -10,6 +10,7 @@ import EditProfile from './Components/Profile/EditProfile';
 import Blog from './Components/Pages/Blog';
 import BlogPage from './Components/Pages/BlogPage';
 import CreateBlog from './Components/Pages/CreateBlog';
+import Fundamental from './Components/Pages/Fundamental';
 
 
 
@@ -31,6 +32,8 @@ function App() {
           <Route path='/blog-page/blogs' element={<Blog/>} />
           <Route path='/blog-page' element={<BlogPage/>} />
           <Route path='/blog-page/create-blog' element={<CreateBlog/>} />
+          <Route path='/fundamental/*' element={<Fundamental/>} />
+
           
         </Routes>
       </Router>
